@@ -157,6 +157,7 @@ header .tjs-container div{
     letter-spacing: 2px;
     color: black;
     padding-top: 2%;
+    margin: 0;
 }
 .featured-card{
     width: 20%;
