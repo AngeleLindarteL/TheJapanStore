@@ -52,7 +52,7 @@ const navMenu = document.querySelector('#nav-menu')
 
 window.addEventListener('scroll', () => {
     if(window.scrollY > 15){
-        header.style.background = "#ff90ba";
+        header.style.background = "rgb(255 153 191)";
         navMenu.style.opacity = "100%";
     }else{
         header.style.background = "transparent"

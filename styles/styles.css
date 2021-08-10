@@ -140,9 +140,11 @@ header .tjs-container div{
     font-size: 1.5em;
 }
 #featured{
-    height: 500px;
+    height: fit-content;
     background-color: rgb(255, 255, 255);
     box-shadow: #0000000d 0px -20px 20px 20px;
+    background-image: url('../img/pattern.png');
+    background-repeat: repeat;
 }
 #featured .tjs-container{
     padding: 1%;
@@ -155,9 +157,12 @@ header .tjs-container div{
     font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: black;
+    color: rgb(255, 153, 191);
     padding-top: 2%;
     margin: 0;
+    background-color: white;
+    padding: 25px;
+    border-bottom: 2px solid rgb(255, 153, 191);
 }
 .featured-card{
     width: 20%;
@@ -173,13 +178,14 @@ header .tjs-container div{
     min-width: 280px;
     min-height: 380px;
     max-height: 390px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px rgb(255, 153, 191) solid;
     margin: 1%;
     transition: .2s;
+    filter: brightness(1);
+    color: rgb(255, 153, 191);
 }
 
 .featured-card:hover{
-    transform: scale(1.1);
 }
 .featured-card img{
     width: 100%;
@@ -200,19 +206,36 @@ header .tjs-container div{
 }
 
 .featured-card a{
-    padding: 10px;
-    border: 2px solid black;
+    padding: 10px 20px;
+    border: 2px solid rgb(255, 153, 191);
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    transition: .2s;
+    transition: .1s;
     margin: 5%;
+    color: rgb(255, 153, 191);
+    position: relative;
+    overflow: hidden;
 }
-
 .featured-card a:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    color: white;
+    background-color: rgb(255, 153, 191);
+    border-color: transparent;
+    padding-right: 50px;
+}
+.featured-card a img{
+    filter: opacity(0);
+    position: absolute;
+    transition: .2s;
+    top: -100%;
+}
+
+.featured-card a:hover > img{
+    filter: invert(1);
+    top: 2px;
+    right: 8%;
 }
 .featured-card a img{
     width: 30px;
@@ -228,5 +251,89 @@ header .tjs-container div{
 }
 hr{
     width: 98%;
-    border: 1px solid rgba(0, 0, 0, 0.295);
+    border: 1px solid rgb(255, 153, 191);;
+}
+
+/*  PROMO CONTAINR */
+
+#promo{
+    height: 100vh;
+}
+.promo-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.promo-container div{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.promo-article{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    background-image: url(../img/royal-pattern.jpg);
+    background-attachment: fixed;
+}
+
+#promo-article-container{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(207, 106, 143, 0.733);
+    color: rgb(255, 153, 191);;
+}
+#promo-article-container h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    background: white;
+    padding: 10px;
+}
+
+#promo-article-container b{
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 153, 191);
+    font-size: 1.2em;
+    position: relative;
+}
+
+#promo-article-container article{
+    background-color: white;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.promo-img{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: brightness(0.7);
+    transition: .4s;
+    overflow: hidden;
+}
+
+#promo:hover .promo-img{
+    filter: brightness(1.1);
+}
+.promo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+#promo:hover .promo-img img{
+    transform: scale(1.2);
 }
