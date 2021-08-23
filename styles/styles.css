@@ -109,7 +109,11 @@ header .tjs-container div{
 .cloud{
     height: 30%;
     position: absolute;
-    transition: 20s;
+    transition: 2s;
+}
+
+.cloud:hover{
+    transform: scale(1.4);
 }
 
 
